@@ -1,38 +1,59 @@
 * {
   font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
   margin: 0px;
   padding: 0px;
+  color: #fdedb5;
 }
 
 .web-page {
   height: 100vh;
   display: grid;
-  grid-template-columns: 25% 1fr 1fr;
+  grid-template-columns: 20% 1fr;
   grid-template-rows: 1fr 80% 1fr;
 
   grid-template-areas:
-    "header header header"
-    "menu content content"
-    "footer footer footer";
+    "header header"
+    "menu content"
+    "footer footer";
 }
 
 .header {
   grid-area: header;
-  border: 1px solid black;
+  background-color: #a1ccb6;
+  /* organizing header elements with flexbox */
+  display: flex;
+  align-items: stretch;
+}
+/* locating element to the right */
+.header > div:nth-child(3) {
+  margin-left: auto;
+}
+.header > div {
   padding: 1rem;
 }
 .menu {
   grid-area: menu;
-  border: 1px solid black;
   padding: 1rem;
+  background-color: #ef776e;
+
+  /* Center its content */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .content {
   grid-area: content;
-  border: 1px solid black;
   padding: 1rem;
+  background-color: #f9cc6e;
+
+  /* Center its content */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .footer {
   grid-area: footer;
-  border: 1px solid black;
   padding: 1rem;
+  background-color: #a1ccb6;
 }
