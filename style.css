@@ -1,3 +1,24 @@
+:root {
+  --grid-columns: 20% 1fr;
+  --grid-rows: 1fr 80% 1fr;
+  --grid-areas: "header header" "menu content" "footer footer";
+}
+
+/* Responsive Tablet */
+@media screen and (max-width: 770px) {
+  :root {
+    --grid-columns: 30% 1fr;
+  }
+}
+/* Responsive Mobile */
+@media screen and (max-width: 426px) {
+  :root {
+    --grid-columns: 1fr;
+    --grid-rows: 1fr 40% 40% 1fr;
+    --grid-areas: "header" "menu" "content" "footer";
+  }
+}
+
 * {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
@@ -9,13 +30,10 @@
 .web-page {
   height: 100vh;
   display: grid;
-  grid-template-columns: 20% 1fr;
-  grid-template-rows: 1fr 80% 1fr;
+  grid-template-columns: var(--grid-columns);
+  grid-template-rows: var(--grid-rows);
 
-  grid-template-areas:
-    "header header"
-    "menu content"
-    "footer footer";
+  grid-template-areas: var(--grid-areas);
 }
 
 .header {
