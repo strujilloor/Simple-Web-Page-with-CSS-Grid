@@ -1,0 +1,38 @@
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.web-page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 1fr 1fr;
+  grid-template-rows: 1fr 80% 1fr;
+
+  grid-template-areas:
+    "header header header"
+    "menu content content"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.menu {
+  grid-area: menu;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.content {
+  grid-area: content;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.footer {
+  grid-area: footer;
+  border: 1px solid black;
+  padding: 1rem;
+}
